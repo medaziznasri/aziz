@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100&display=swap");
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    --primary: #e78a00;
+    --surface: #2b2b2b;
+    --on-surface: #ffffff;
+    background-image: url('../Assets/bbe207eb0160428fbad7113c1afd289c.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: auto;
+    /* Increased to ensure full coverage */
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105vh;
+    /* Cover the entire viewport height */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* HomePage.css */
+
+
+.text-content h2 {
+    font-size: 28px;
+    /* Increase font size */
+    color:white;
+    /* Set text color to orange */
+}
+
+.text-content h3 {
+    font-size: 24px;
+    /* Increase font size */
+    margin-top: 10px;
+    /* Add margin between heading elements */
+    color: white;
+    /* Set text color to white */
+}
+
+.text-content {
+    position: absolute;
+    top: 50px;
+    /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 200px;
+    /* Adjust as needed */
+}
+
+.text-content p {
+    font-size: 16px;
+    /* Decrease font size */
+    font-style: italic;
+    /* Make text italic */
+   
+    /* Add margin between paragraphs */
+    color: orange;
+    /* Set text color to orange */
+}
+
+
+
+
+
+
+
+
+
+html {
+    font-size: 0.9vw;
+}
+
+body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--surface);
+}
+
+body .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+.container {
+    width: 80rem;
+    /* Increase the width */
+    height: 50rem;
+    /* Increase the height */
+    padding: 2rem 8rem;
+    /* Increase the padding */
+    background-color: rgba(43, 43, 43, 0.8);
+    /* Adjust the alpha value as needed */
+    border-radius: 1.5rem;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
+    display: grid;
+    position: relative;
+    overflow: hidden;
+}
+
+.container main {
+    display: flex;
+    transition: translate 0.5s cubic-bezier(0.33, 0.14, 0.39, 1.3);
+}
+
+.container main .content {
+    width: 59.5rem;
+    height: 39rem;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container main .content .product-image {
+    width: 25rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container main .content .product-image img {
+    width: inherit;
+    height: inherit;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.container main .content .add-to-cart-btn {
+    background-color: var(--primary);
+    gap: 0.5rem;
+}
+
+.container main .content .product-name {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: var(--on-surface);
+}
+
+.container main .content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 11.25rem;
+    line-height: 12rem;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.container .footer {
+    width: 59.5rem;
+    height: 2.5rem;
+    color: var(--on-surface);
+    position: absolute;
+    bottom: 1.75rem;
+    left: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.container .footer .footer-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.container .footer .footer-navigation .nav-arrow {
+    font-size: 1.5rem;
+    transition: scale 0.15s ease;
+    cursor: pointer;
+}
+
+.container .footer .footer-navigation .nav-arrow:hover {
+    scale: 1.2;
+}
+
+.container .footer .page-count span {
+    font-weight: 500;
+}
+
+.container .footer .page-count span:first-child {
+    color: var(--primary);
+}
+
+.container::before {
+    content: "";
+    width: 24rem;
+    height: 24rem;
+    background-color: #262626;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2rem var(--surface), 0 0 0 4rem #2e2e2e;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    translate: 35% 50%;
+    z-index: -1;
+}
+
+
+
+.container .decorations .decoration-lines {
+    width: 19rem;
+    height: 0.75rem;
+    background-color: #515151;
+    border-radius: 0.75rem;
+    position: absolute;
+}
+
+.container .decorations .decoration-lines::before,
+.container .decorations .decoration-lines::after {
+    content: "";
+    height: inherit;
+    border-radius: inherit;
+    position: absolute;
+    bottom: -2.25rem;
+}
+
+.container .decorations .decoration-lines::before {
+    width: 7.6rem;
+    background-color: var(--primary);
+    left: 2.375rem;
+}
+
+.container .decorations .decoration-lines::after {
+    width: 3.8rem;
+    background-color: #515151;
+    right: 3rem;
+}
+
+.container .decorations .decoration-lines.decoration-line-1 {
+    top: 30%;
+    left: 0;
+    translate: -25%;
+}
+
+.container .decorations .decoration-lines.decoration-line-2 {
+    top: 58%;
+    right: 0;
+    translate: 20%;
+}
+
+
